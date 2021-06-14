@@ -32,6 +32,8 @@ Route::post('/profile/changePassword', 'HomeController@changePassword')->name('p
 
 });
 
+//Admin route
+
 Route::group(['namespace' => 'Admin', 'middleware' => ['auth']], function () {
 
 Route::resource('users', 'UsersController');
